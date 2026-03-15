@@ -24,14 +24,14 @@ const DEFAULT_MODEL = 'MODEL_PLACEHOLDER_M37'; // Gemini 3.1 Pro (High)
 
 const MODEL_ALIASES = {
     // Gemini
-    'gemini-high':    'MODEL_PLACEHOLDER_M37',
-    'gemini-low':     'MODEL_PLACEHOLDER_M36',
-    'gemini-flash':   'MODEL_PLACEHOLDER_M47',
+    'gemini-high': 'MODEL_PLACEHOLDER_M37',
+    'gemini-low': 'MODEL_PLACEHOLDER_M36',
+    'gemini-flash': 'MODEL_PLACEHOLDER_M47',
     // Claude
-    'claude-opus':    'MODEL_PLACEHOLDER_M26',
-    'claude-sonnet':  'MODEL_PLACEHOLDER_M35',
+    'claude-opus': 'MODEL_PLACEHOLDER_M26',
+    'claude-sonnet': 'MODEL_PLACEHOLDER_M35',
     // GPT
-    'gpt-120b':       'MODEL_OPENAI_GPT_OSS_120B_MEDIUM',
+    'gpt-120b': 'MODEL_OPENAI_GPT_OSS_120B_MEDIUM',
 };
 
 function resolveModel(input) {
@@ -54,7 +54,6 @@ const SYSTEM_PROMPT = `You are an autonomous sub-agent executing a delegated tas
 6. Prefer read-only operations (grep, view_file, list_dir) unless edits are required.
 7. Be concise. Only include information relevant to the task.
 8. NEVER spawn or delegate to other sub-agents. You must NOT call submit_agent, get_agent_results, or any MCP tool that creates child agents. Complete all work yourself.
-9. For reading files and searching code, use built-in tools directly (view_file, grep_search, list_dir, find_by_name). Do NOT delegate these to another agent.
 
 TASK:
 `;
